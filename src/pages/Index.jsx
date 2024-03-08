@@ -55,13 +55,7 @@ const Index = () => {
 
       if (response.status === 200 && data.accessToken) {
         setAccessToken(data.accessToken);
-        toast({
-          title: "Login successful.",
-          description: "You are now logged in.",
-          status: "success",
-          duration: 9000,
-          isClosable: true,
-        });
+        window.location.href = "/policies";
       } else {
         throw new Error(data.error || "Failed to log in.");
       }
